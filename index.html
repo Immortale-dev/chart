@@ -1,11 +1,40 @@
 <script type="module">
 
-    import Chart from "./lib/chart/Chart.js";
+    import Telechart from "./lib/telechart/Telechart.js";
     
-    var c = new Chart();
+    var c = new Telechart({
+        el: document.querySelector('#c1'),
+        xBounds: {min: 1547827221960, max: 1550246421960}
+    });
     console.log(c);
+    
+    let c1 = [
+        {
+            x: 1547827221960,
+            y: 10
+        },
+        {
+            x: 1548172821960,
+            y: 65
+        },
+        {
+            x: 1548864021960,
+            y: 34
+        },
+        {
+            x: 1549382421960,
+            y: 89
+        },
+        {
+            x: 1550246421960,
+            y: 40
+        }
+    ];
+    
+    c.addChart({color: '#3cc23f', tickness: 2}, c1);
+    
     
 </script>
 
 
-<div id="c1" style="width: 800px; height: 600px; border: solid 1px #000;"></div>
+<div id="c1" style="width: 800px; height: 600px;"></div>
