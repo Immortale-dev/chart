@@ -4,9 +4,12 @@
     
     var c = new Telechart({
         el: document.querySelector('#c1'),
-        xBounds: {min: 1547827221960, max: 1550246421960}
+        xFrames: {min: 1547827221960, max: 1550246421960},
+        yFrames: {min: 0, max: 100}
     });
     console.log(c);
+    
+    window.c = c;
     
     let c1 = [
         {
@@ -33,8 +36,10 @@
     
     c.addChart({color: '#3cc23f', tickness: 2}, c1);
     
+    c._render();
+    
     
 </script>
 
 
-<div id="c1" style="width: 800px; height: 600px;"></div>
+<div id="c1"></div>
