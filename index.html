@@ -227,6 +227,7 @@
                 _line.removeChild(_line.children[0]);
                 
             
+            let ind = 0;
             for(let v of vals){
                 let lb = document.createElement('div');
                 lb.classList.add('chart-block-hover-lines-el');
@@ -237,7 +238,9 @@
                 let dot = document.createElement('div');
                 dot.style.color = v.color;
                 dot.style.top = valCoof(ev.bounds, v.value.y)*100+'%';
-                _line.appendChild(dot);
+                if(!chart._topCharts[ind].disabled)
+                    _line.appendChild(dot);
+                ind++;
             }
             return vals[0].value.x;
         }
