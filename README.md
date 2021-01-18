@@ -1,3 +1,3 @@
 # chart
 
-[demo:](https://webdeveloperukraine.github.io/telechart/index.html) 
+[demo:](https://immortale-dev.github.io/telechart/index.html) 
